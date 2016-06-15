@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DavidRenSh@hotmail.com</title>
+    <link rel="icon" href="https://code.angularjs.org/favicon.ico" />
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.24/system-polyfills.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/router.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.15/http.dev.js"></script>
+    <!--<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/1.0.11/ng2-bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="./node_modules/angularfire2/angularfire2.js"></script>
+    <script src="./node_modules/firebase/lib/firebase-web.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+    <script>
+        System.config({
+            map: {
+                firebase: 'node_modules/firebase/lib/firebase-web.js',
+                angularfire2: 'node_modules/angularfire2',
+                moment: 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js'
+            },
+            packages: {
+                appScripts: {
+                    defaultExtension: 'js'
+                }
+                ,
+                angularfire2: {
+                    defaultExtension: 'js',
+                    main: 'angularfire2.js'
+                }
+            }
+            //, map: {
+            //    moment: 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js'
+            //}
+        });
+        System.import('appScripts/app')
+              .then(null, console.error.bind(console));
+    </script>
+    <div >
+        <router-app></router-app>
+    </div>
+
+</body>
+</html>
